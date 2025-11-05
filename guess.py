@@ -64,6 +64,27 @@ def play():
 
     if attempts == 0:
         print(f"\n You're out of attempts! The correct number was {number}.")
+        
+def how_to_play():
+    print("""
+=== HOW TO PLAY ===
+
+1. Choose a difficulty level:
+   - Easy:   Guess a number from 1 to 10 (5 attempts)
+   - Medium: Guess a number from 1 to 50 (7 attempts)
+   - Hard:   Guess a number from 1 to 100 (10 attempts)
+
+2. The computer picks a secret number in the chosen range.
+3. Enter your guess each turn:
+   - You'll get a "Very Hot / Warm / Cold" hint based on how close you are.
+   - You'll also get "Go Higher" or "Go Lower" to guide you.
+4. If you guess correctly before your attempts run out, you win!
+5. If you run out of attempts, the correct number is revealed.
+
+Tips:
+- Start with Medium to get the hang of the hints.
+- Very Hot means you're very close (≤ 3 away).
+""")
 
 def main():
     while True:
@@ -73,5 +94,6 @@ def main():
             print("\n Thanks for playing!")
             break
 
-if _name_ == "_main_":
+if __name__ == "__main__":
+    how_to_play() 
     main()
